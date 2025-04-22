@@ -12,13 +12,13 @@
             <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
         </div>
 
-        {{-- Tampilkan data ruangan --}}
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Nama Ruangan</th>
                     <th>Deskripsi</th>
                     <th>Kapasitas</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +27,7 @@
                     <td>{{ $r->nama }}</td>
                     <td>{{ $r->deskripsi }}</td>
                     <td>{{ $r->kapasitas }}</td>
+                    <td>{{ $r->tersedia ? 'Tersedia' : 'Tidak Tersedia' }}</td>
                 </tr>
                 @endforeach
             </tbody>
